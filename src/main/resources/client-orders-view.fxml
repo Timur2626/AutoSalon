@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientOrdersController">
+    <children>
+        <VBox spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Мои заказы" textAlignment="CENTER">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+
+                <!-- Информация и кнопки -->
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <children>
+                        <Label fx:id="ordersCountLabel" text="Всего заказов: 0" />
+                        <Button mnemonicParsing="false" onAction="#handleRefresh" text="Обновить" />
+                        <Button mnemonicParsing="false" onAction="#handleCancelOrder" text="Отменить заказ" />
+                    </children>
+                    <padding>
+                        <Insets left="20.0" right="20.0" />
+                    </padding>
+                </HBox>
+
+                <!-- Таблица заказов -->
+                <TableView fx:id="ordersTable" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="orderIdColumn" prefWidth="100.0" text="№ Заказа" />
+                        <TableColumn fx:id="carIdColumn" prefWidth="150.0" text="Автомобиль" />
+                        <TableColumn fx:id="dateColumn" prefWidth="100.0" text="Дата" />
+                        <TableColumn fx:id="statusColumn" prefWidth="100.0" text="Статус" />
+                        <TableColumn fx:id="priceColumn" prefWidth="100.0" text="Сумма" />
+                    </columns>
+                </TableView>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

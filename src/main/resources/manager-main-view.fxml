@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.autosalon.ManagerMainController">
+    <top>
+        <VBox spacing="10.0" style="-fx-background-color: #34495e;">
+            <children>
+                <MenuBar>
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Заказы">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#handleOrdersManagement" text="Управление заказами" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Клиенты">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#handleCustomerContacts" text="Контакты с клиентами" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <Label fx:id="welcomeLabel" text="Панель управления менеджера" style="-fx-text-fill: white; -fx-padding: 10;">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="20.0">
+            <children>
+                <Label text="Панель управления менеджера автосалона" style="-fx-font-size: 20; -fx-text-fill: #2c3e50;" />
+                <Label text="Здесь будут отображаться:" style="-fx-text-fill: #7f8c8d;" />
+                <VBox spacing="10.0" style="-fx-padding: 20;">
+                    <Label text="• Список новых заявок" />
+                    <Label text="• Управление статусами заказов" />
+                    <Label text="• Контакты с клиентами" />
+                    <Label text="• Проверка кредитоспособности" />
+                </VBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

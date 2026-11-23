@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.autosalon.PreparerMainController">
+    <top>
+        <VBox spacing="10.0" style="-fx-background-color: #16a085;">
+            <children>
+                <MenuBar>
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Заказы">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#handleOrderPreparation" text="Подготовка заказов" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Склад">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#handleInventory" text="Учет автомобилей" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <Label fx:id="welcomeLabel" text="Панель подготовки" style="-fx-text-fill: white; -fx-padding: 10;">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="20.0">
+            <children>
+                <Label text="Панель подготовки автомобилей" style="-fx-font-size: 20; -fx-text-fill: #2c3e50;" />
+                <Label text="Здесь будут отображаться:" style="-fx-text-fill: #7f8c8d;" />
+                <VBox spacing="10.0" style="-fx-padding: 20;">
+                    <Label text="• Список автомобилей для подготовки" />
+                    <Label text="• Статусы подготовки" />
+                    <Label text="• Учет выполненных работ" />
+                </VBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
